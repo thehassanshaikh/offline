@@ -1,36 +1,76 @@
 @font-face {
-    font-family: 'league-spartan'; /* Simplified font-family */
-    src: url('/assets/fonts/LeagueSpartan-VariableFont_wght.ttf'); /* Adjust path if needed */
-    font-weight: normal; /* Add font-weight for clarity */
+  font-family: 'league-spartan';
+  src: url('/assets/fonts/LeagueSpartan-VariableFont_wght.ttf');
+  font-weight: 600;
 }
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{
-    background-image: url("/assets/images/grey-paper-background.png");
-    padding: 0 2rem;
-    overflow: scroll;
-    overflow-x: hidden;
-}
-
-::-webkit-scrollbar {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  body{
+    background-image: url('/assets/images/grey-paper-background.png');
+  }
+  
+  ::-webkit-scrollbar {
     display: none;
   }
-  
-  nav {
-    float: right;
-  }
-  
-  li {
-    font-family:'league-spartan';
-    display: block;
-    margin: 0px 0px 0px 0px;
-    -webkit-writing-mode: vertical-rl;
-    -ms-writing-mode: tb-rl;
-    writing-mode: vertical-rl;
-    padding: 30px 0px 0px 0px;
+
+.main-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%;
 }
-  
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+nav{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+ul {
+  display: flex
+;
+  flex-direction: column;
+  padding: 1rem;
+}
+li{
+  display: block;
+  font-family: 'league-spartan',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0px 0px 0px 0px;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  padding: 30px 0px 0px 0px;
+}
+
+section.hero-container {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100vh;
+  position: relative;
+}
+
+.logo-con {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  left: 6rem;
+}
+
+.logo-con img {
+  width: 90%;
+}
+
+.hero-img-con img {
+  width: 80%;
+}
