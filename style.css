@@ -1,16 +1,16 @@
 @font-face {
   font-family: "league-spartan";
-  src: url("/assets/fonts/LeagueSpartan-VariableFont_wght.ttf");
+  src: url("assets/fonts/LeagueSpartan-VariableFont_wght.ttf");
   font-weight: 600;
 }
 
 @font-face {
   font-family: "maradona-signature";
-  src: url("/assets/fonts/Maradona\ Signature.ttf");
+  src: url("assets/fonts/Maradona\ Signature.ttf");
 }
 @font-face {
   font-family: "open-sans";
-  src: url("/assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf");
+  src: url("assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf");
 }
 * {
   margin: 0;
@@ -19,7 +19,7 @@
 }
 
 body {
-  background-image: url("/assets/images/grey-paper-background.png");
+  background-image: url("assets/images/grey-paper-background.png");
 }
 
 ::-webkit-scrollbar {
@@ -182,7 +182,7 @@ p.hero-text {
 }
 
 
-/* Services section */
+/* Services section 
 
 .services-sec-con {
   display: flex;
@@ -216,8 +216,9 @@ ul.service-text-1 {
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 10px; /* Optional, for spacing */
+  padding: 10px; /* Optional, for spacing 
 }
+
 
 .photo {
   color: black;
@@ -234,3 +235,50 @@ ul.service-text-1 {
   color: white;
 }
 
+*/
+
+.services-text-image-container{
+  background-image: url(assets/images/services.png);
+}
+
+.services-section-container {
+  display: flex
+;
+  justify-content: space-around;
+}
+.service-text-image-con {
+  display: flex
+;
+}
+
+.photo-text-con {
+  display: flex;
+  align-items: flex-end;
+}
+
+.photo-text-con {
+  display: flex
+;
+  align-items: flex-end;
+  position: relative;
+  bottom: 15rem;
+  left: 18rem;
+}
+
+span.g {
+  font-size: 20rem;
+  position: relative;
+  top: 8rem;
+  font-family: 'open-sans';
+  font-weight: 600;
+}
+
+.service-text {
+  font-family: 'open-sans';
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.text-white{
+  color: #ffff;
+}
