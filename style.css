@@ -259,7 +259,7 @@ ul.service-text-1 {
   align-items: flex-end;
   position: absolute;
   bottom: 5rem;
-  left: 7rem;
+  left: 2rem;
 }
 
 .photo-text-con {
@@ -273,9 +273,21 @@ ul.service-text-1 {
 span.g {
   font-size: 40rem;
   position: relative;
-  top: 18rem;
+  top: 17rem;
   font-family: 'open-sans';
   font-weight: 600;
+}
+
+span.raphy.service-text {
+  position: relative;
+  right: 10rem;
+}
+
+
+.service-list-text-con {
+  position: relative;
+  right: 9rem;
+  top: 1rem;
 }
 
 .service-text {
@@ -290,4 +302,19 @@ span.g {
 
 .services-text-container {
   width: 50%;
+  display: flex
+;
+  justify-content: space-around;
+}
+
+li.service-list-text {
+  font-family: 'open-sans';
+  font-weight: 600;
+  list-style: none;
+  font-size: 1.2rem;
+  padding-top: 0.75rem;
+}
+.service-list-con-2 {
+
+  padding-top: 10rem;
 }
