@@ -244,31 +244,36 @@ ul.service-text-1 {
 .services-section-container {
   display: flex
 ;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .service-text-image-con {
-  display: flex
-;
-}
-
-.photo-text-con {
   display: flex;
-  align-items: flex-end;
+  position: relative;
+  width: 50%;
+  justify-content: flex-end;
 }
 
 .photo-text-con {
   display: flex
 ;
   align-items: flex-end;
-  position: relative;
-  bottom: 15rem;
-  left: 18rem;
+  position: absolute;
+  bottom: 5rem;
+  left: 7rem;
 }
 
+.photo-text-con {
+  display: flex
+;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 5rem;
+  left: 7rem;
+}
 span.g {
-  font-size: 20rem;
+  font-size: 40rem;
   position: relative;
-  top: 8rem;
+  top: 18rem;
   font-family: 'open-sans';
   font-weight: 600;
 }
@@ -281,4 +286,8 @@ span.g {
 
 .text-white{
   color: #ffff;
+}
+
+.services-text-container {
+  width: 50%;
 }
