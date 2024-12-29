@@ -119,9 +119,65 @@ p.hero-text {
 
 .section-style {
   min-height: 100vh;
-  padding:5rem 0;
+  padding-top:5rem;
+  padding-bottom: 5rem;
 }
 
+.about-section-con {
+  display: grid;
+  grid-template-columns: 20% 40% 40%; /* Three columns with specified widths */
+  align-items: start; /* Center items vertically */
+
+}
+
+.about-logo-con {
+  position: relative;
+  left: 5rem;
+}
+
+.about-img-con {
+  padding-top: 5rem;
+}
+
+.about-logo-con img,
+.about-img-con img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-text-con {
+  position: relative;
+  top: 10rem;
+  right: 5rem;
+}
+.about-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: "maradona-signature";
+  padding-bottom: 1rem;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  font-family: "open-sans";
+  font-weight: 700;
+  width: 65%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-section-con {
+    grid-template-columns: 1fr; /* Stack all columns */
+    text-align: center; /* Center text content */
+  }
+
+  .about-text-con {
+    padding: 20px;
+  }
+}
+/* 
 .about-section-con {
   display: flex;
 }
@@ -159,11 +215,11 @@ p.hero-text {
   font-family: "open-sans";
   font-weight: 700;
   font-size: 20px;
-}
+} */
 
 /* Add filler section */
 
-.add-filler-section {
+/* .add-filler-section {
   background-image: url("assets/images/add-filler-background.png");
   background-size: cover;
   background-position: center center;
@@ -185,11 +241,11 @@ p.hero-text {
   font-weight: 600;
   color: #ffff;
   font-style: italic;
-}
+} */
 
 /* services section */
 
-.services-text-image-container{
+/* .services-text-image-container{
   background-image: url(assets/images/services.png);
 }
 
@@ -304,7 +360,6 @@ li.service-list-text {
   width: 35%;
 }
 
-/* tablet responsive */
 @media screen and (max-width: 768px) {
   .side-padding {
     padding: 0 2rem;
@@ -319,4 +374,23 @@ li.service-list-text {
   font-size: 1.8rem;
 }
 }
+ */
 
+ @media screen and (max-width: 768px){
+  .side-padding {
+    padding: 0 2rem;
+}
+.about-text-con, .about-logo-con {
+  position: static;
+}
+
+.about-text{
+  width: 100%;
+}
+ }
+
+ @media screen and (max-width: 425px){
+  .side-padding {
+    padding: 0 1rem;
+}
+ }
