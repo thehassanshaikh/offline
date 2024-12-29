@@ -6,11 +6,11 @@
 
 @font-face {
   font-family: "maradona-signature";
-  src: url("assets/fonts/Maradona\ Signature.ttf");
+  src: url("assets/fonts/Maradona Signature.ttf");
 }
 @font-face {
   font-family: "open-sans";
-  src: url("assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf");
+  src: url("assets/fonts/OpenSans-VariableFont_wdth,wght.ttf");
 }
 * {
   margin: 0;
@@ -45,6 +45,7 @@ body {
 
 nav {
   min-height: 100vh;
+  padding: 0 1rem;
   display: flex;
   align-items: center;
   position: fixed;
@@ -163,7 +164,7 @@ p.hero-text {
 /* Add filler section */
 
 .add-filler-section {
-  background-image: url("assets//images/add-filler-background.png");
+  background-image: url("assets/images/add-filler-background.png");
   background-size: cover;
   background-position: center center;
 }
@@ -302,3 +303,20 @@ li.service-list-text {
 .hospility-sec-2-img-2 img {
   width: 35%;
 }
+
+/* tablet responsive */
+@media screen and (max-width: 768px) {
+  .side-padding {
+    padding: 0 2rem;
+  }
+  .hero-text {
+    font-size: 1.5rem;
+    left: 0;
+  }
+}
+@media screen and (max-width: 1440px) {
+.about-heading{
+  font-size: 1.8rem;
+}
+}
+
