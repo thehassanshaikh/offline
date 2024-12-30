@@ -196,7 +196,7 @@ p.hero-text {
 }
 /* services section */
 
-/* .services-text-image-container{
+ .services-text-image-container{
   background-image: url(assets/images/services.png);
 }
 
@@ -269,6 +269,8 @@ li.service-list-text {
   padding-top: 10rem;
 }
 
+/* Hospitality section */
+
 .hospitality-con{
   display: flex;
 }
@@ -311,6 +313,11 @@ li.service-list-text {
   width: 35%;
 }
 
+.responsive-image{
+  width: 100%;
+  height: auto; 
+}
+
 @media screen and (max-width: 768px) {
   .side-padding {
     padding: 0 2rem;
@@ -325,7 +332,7 @@ li.service-list-text {
   font-size: 1.8rem;
 }
 }
- */
+
 
  @media screen and (max-width: 1024px){
 
@@ -338,6 +345,22 @@ li.service-list-text {
   .add-heading{
     font-size: 4rem;
   }
+
+  /* services section */
+
+  .services-section-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.services-text-container , .service-text-image-con{
+  width: 100%;
+}
+
+.services-text-container{
+  padding-top: 10rem;
+}
+
  }
 
 
