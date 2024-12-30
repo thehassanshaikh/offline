@@ -163,63 +163,11 @@ p.hero-text {
   font-size: 1.2rem;
   font-family: "open-sans";
   font-weight: 700;
-  width: 65%;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .about-section-con {
-    grid-template-columns: 1fr; /* Stack all columns */
-    text-align: center; /* Center text content */
-  }
-
-  .about-text-con {
-    padding: 20px;
-  }
-}
-/* 
-.about-section-con {
-  display: flex;
-}
-
-.about-section-con {
-  width: 100%;
-}
-
-.about-img-con img {
-  padding-top: 5rem;
-}
-
-.about-text-con {
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
-  position: relative;
-  top: 10rem;
-  right: 10rem;
-  flex-direction: column;
-}
-
-.about-logo-con img {
-  width: 100%;
-}
-.signature-style {
-  font-family: "maradona-signature";
-}
-
-.about-heading {
-  font-size: 2.6rem;
-}
-
-.about-text {
-  font-family: "open-sans";
-  font-weight: 700;
-  font-size: 20px;
-} */
 
 /* Add filler section */
 
-/* .add-filler-section {
+.add-filler-section {
   background-image: url("assets/images/add-filler-background.png");
   background-size: cover;
   background-position: center center;
@@ -241,8 +189,11 @@ p.hero-text {
   font-weight: 600;
   color: #ffff;
   font-style: italic;
-} */
+}
 
+.signature-style{
+  font-family:'maradona-signature';
+}
 /* services section */
 
 /* .services-text-image-container{
@@ -376,7 +327,31 @@ li.service-list-text {
 }
  */
 
+ @media screen and (max-width: 1024px){
+
+  .about-text-con {
+    position: relative;
+    top: 4rem;
+    right: 4rem;
+}
+
+  .add-heading{
+    font-size: 4rem;
+  }
+ }
+
+
  @media screen and (max-width: 768px){
+
+  .about-section-con {
+    grid-template-columns: 1fr; /* Stack all columns */
+    text-align: center; /* Center text content */
+  }
+
+  .about-text-con {
+    padding: 20px;
+  }
+
   .side-padding {
     padding: 0 2rem;
 }
