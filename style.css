@@ -282,7 +282,7 @@ li.service-list-text {
   justify-content: flex-end;
   align-items: start;
 }
-.hospitality-text {
+.services-text {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   font-family: "league-spartan";
@@ -318,20 +318,28 @@ li.service-list-text {
   height: auto; 
 }
 
-@media screen and (max-width: 768px) {
-  .side-padding {
-    padding: 0 2rem;
-  }
-  .hero-text {
-    font-size: 1.5rem;
-    left: 0;
-  }
+/* .hospitality-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: "league-spartan";
+  font-weight: 600;
+  font-size: 8rem;
+  color: transparent;
+  text-shadow: 0 0 0px #9191918a;
+  padding: 0 2rem;
 }
-@media screen and (max-width: 1440px) {
-.about-heading{
-  font-size: 1.8rem;
+
+.hospitality-flex {
+  display: flex;
+  align-items: center;
 }
-}
+
+.hospitality-text {
+  margin-right: 1rem; /* Adjust the spacing as needed 
+} 
+*/
+
+
 
 
  @media screen and (max-width: 1024px){
@@ -361,11 +369,23 @@ li.service-list-text {
   padding-top: 10rem;
 }
 
+/* hospitality section */
+
+.services-text{
+  font-size: 6rem;
+}
+
  }
 
 
- @media screen and (max-width: 768px){
-
+ @media screen and (max-width: 768px) {
+  .side-padding {
+    padding: 0 2rem;
+  }
+  .hero-text {
+    font-size: 1.5rem;
+    left: 0;
+  }
   .about-section-con {
     grid-template-columns: 1fr; /* Stack all columns */
     text-align: center; /* Center text content */
@@ -385,10 +405,33 @@ li.service-list-text {
 .about-text{
   width: 100%;
 }
- }
+
+/* service Section */
+
+.services-text{
+  font-size: 5rem;
+}
+
+}
+
+
 
  @media screen and (max-width: 425px){
   .side-padding {
     padding: 0 1rem;
+}
+
+.services-text{
+  font-size: 3rem;
+}
+
+.hospitality-con {
+  flex-direction: column;
+}
+.hospitality-text-con {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
 }
  }
