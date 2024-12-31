@@ -201,8 +201,7 @@ p.hero-text {
 }
 
 .services-section-container {
-  display: flex
-;
+  display: flex;
   justify-content: space-between;
 }
 .service-text-image-con {
@@ -361,6 +360,18 @@ li.service-list-text {
   position: relative;
   right: 5rem;
 }
+
+.col-md-6.hospility-sec-5-img-1 {
+  position: relative;
+  left: 18rem;
+  top: 25rem;
+}
+
+.hospility-sec-5-img-2 {
+  display: flex;
+  justify-content: center;
+}
+
 
 
  @media screen and (max-width: 1024px){
