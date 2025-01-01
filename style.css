@@ -317,6 +317,25 @@ li.service-list-text {
   height: auto; 
 }
 
+.sakura-log-con {
+  display: flex
+;
+  justify-content: center;
+}
+.sakura-log-con  {
+  display: flex;
+  justify-content: center;
+  padding-left: 5rem;
+}
+.sakura-log-con img {
+  width: 67%;
+}
+
+p.real-estate-text {
+  transform: none;
+  writing-mode: horizontal-tb;
+}
+
 /* .hospitality-text {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
@@ -370,6 +389,7 @@ li.service-list-text {
 .hospility-sec-5-img-2 {
   display: flex;
   justify-content: center;
+  z-index: 1;
 }
 
 
@@ -405,6 +425,12 @@ li.service-list-text {
 
 .services-text{
   font-size: 6rem;
+}
+
+.col-md-6.hospility-sec-5-img-1 {
+  position: relative;
+  left: 10rem;
+  top: 15rem;
 }
 
  }
@@ -448,15 +474,32 @@ li.service-list-text {
   justify-content: center;
 }
 
+.col-md-6.hospility-sec-5-img-1{
+  position: static;
 }
 
+/* alco-bev section  */
+.alco-bev-sec-3-img-2 img{
+  margin-top: 1rem;
+}
+
+}
+
+/* Media queries for mobile devices */
  @media screen and (max-width: 425px){
+
+  nav{
+    display: none;
+  }
   .side-padding {
     padding: 0 1rem;
 }
 
 .services-text{
   font-size: 3rem;
+}
+span.g {
+  font-size: 20rem;
 }
 
 .hospitality-con {
@@ -485,5 +528,7 @@ li.service-list-text {
   padding-top: 1rem;
   
 }
+
+
 
  }
