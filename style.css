@@ -336,6 +336,17 @@ p.real-estate-text {
   writing-mode: horizontal-tb;
 }
 
+.col-md-2.real-estate-2-img-2 {
+  display: flex
+;
+  align-items: center;
+  margin-left: -5rem;
+}
+
+iframe {
+  height: 80vh;
+}
+
 /* .hospitality-text {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
