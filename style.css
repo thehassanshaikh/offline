@@ -350,6 +350,21 @@ iframe {
   height: 80vh;
 }
 
+.lifestyle-img-2-con img {
+  height: 50%;
+}
+
+.lifestyle-3-img-1-con img {
+  width: 90%;
+}
+
+.lifestyle-4-img-1-con img{
+  width: 50%;
+}
+.lifestyle-4-img-3-con img{
+  width: 70%;
+}
+
 /* .hospitality-text {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
