@@ -391,6 +391,16 @@ iframe {
   margin-left: -5rem;
 }
 
+.contact-img-con{
+  border-right: 5px solid #000;
+}
+
+img.img-fluid.social-icons {
+  width: auto;
+  height: 10%;
+  padding: 0 10px;
+}
+
 /* .hospitality-text {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
