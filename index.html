@@ -13,6 +13,10 @@
 </head>
 
 <body>
+   <!-- Loading Screen -->
+   <div id="loading-screen">
+    <img id="loading-image" src="assets/images/Logo.png" alt="Loading...">
+  </div>
   <div class="main-container">
     <nav>
       <ul>
@@ -23,7 +27,7 @@
       </ul>
     </nav>
     <main>
-      <section class="hero-con container section-style">
+      <section class="hero-con container section-style" id="home">
         <div class="row">
           <div class="col-md-6 d-flex justify-content-center align-items-center hero-img-1-con">
             <img src="assets/images/Logo.png" alt="" class="img-fluid">
@@ -133,8 +137,8 @@
         </div>
       </section> -->
       <!-- ------ Services Section -------- -->
-      <section class="container-full services-section section-style">
-        <div class="row">
+      <section class="container-full services-section section-style" id="work">
+        <div class="row side-padding">
           <div class="col-md-6">
             <img src="assets/images/services-img.png" alt="" class="img-fluid">
           </div>
@@ -149,7 +153,7 @@
                   <li class="service-list-text">Performance MArketing</li>
                 </ul>
               </div>
-              <div class="col-md-6 vh-100 d-flex align-items-center">
+              <div class="col-md-6 vh-100 d-flex align-items-lg-center justify-content-sm-center ">
                 <ul>
                   <li class="service-list-text">Logo and Branding</li>
                   <li class="service-list-text">Brochures <br />Brand Book</li>
@@ -427,7 +431,7 @@
       </div>
     </div>
   </section>
-  <footer>
+  <footer id="contact">
     <div class="container-full">
       <div class="row">
         <div class="col-md-6 contact-img-con">
@@ -447,7 +451,7 @@
             </div>
             <div class="row mb-3">
               <div class="col-sm-10">
-                <textarea class="contact-form" id="message" rows="5" placeholder="Enter your message"></textarea>
+                <textarea class="contact-form" id="message" rows="10" placeholder="Enter your message"></textarea>
               </div>
             </div>
             <div class="row">
