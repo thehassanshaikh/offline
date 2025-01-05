@@ -18,7 +18,7 @@
   box-sizing: border-box;
 }
 html {
-  scroll-behavior: auto; /* Disable native smooth scrolling */  
+  scroll-behavior: auto !important;
 }
 
 body {
