@@ -173,7 +173,7 @@ nav ul li a:hover {
   left: -12rem;
 } */
 
-.hero-text-white {
+.hero-text-white,.about-text-white {
   color: #ffff;
 }
 
@@ -209,7 +209,7 @@ nav ul li a:hover {
 .about-text-con {
   position: relative;
   top: 10rem;
-  right: 5rem;
+  right: 10.5rem;
 }
 .about-heading {
   font-size: 2rem;
@@ -564,6 +564,10 @@ button.btn.submit-button {
 
 
  @media screen and (max-width: 768px) {
+
+  .about-text-white {
+    color: black;
+  }
   .side-padding {
     padding: 0 2rem;
   }
