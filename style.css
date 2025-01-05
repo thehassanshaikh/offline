@@ -115,6 +115,9 @@ nav ul li a {
   color: #000;
   z-index: -1;
 }
+nav ul li a:hover {
+  text-decoration: underline;
+}
 
 .hero-img-1-con img{
   margin-left: 10rem;
