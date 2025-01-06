@@ -90,15 +90,6 @@ let config = {
 	RENDER_SPEED: 0.4
 };
 
-const colorPalette = [
-  [195, 161, 101], // Red
-  [131, 108, 71], // Green
-  [180, 149, 95], // Blue
-];
-
-function getRandomColor() {
-  return colorPalette[Math.floor(Math.random() * colorPalette.length)];
-}
 
 function PointerPrototype() {
 	this.id = -1;
@@ -110,9 +101,8 @@ function PointerPrototype() {
 	this.deltaY = 0;
 	this.down = false;
 	this.moved = false;
-	// this.color = [30, 0, 300];
-   // Assign a random color from the palette
-   this.color = getRandomColor();
+	this.color = [30, 0, 300];
+
 }
 
 let pointers = [];
@@ -439,28 +429,28 @@ const checkerboardShader = compileShader(
 );
 
 const displayShaderSource = `
-    precision highp float;
-    precision highp sampler2D;
+  precision highp float;
+precision highp sampler2D;
 
-    varying vec2 vUv;
-    varying vec2 vL;
-    varying vec2 vR;
-    varying vec2 vT;
-    varying vec2 vB;
-    uniform sampler2D uTexture;
-    uniform sampler2D uBloom;
-    uniform sampler2D uSunrays;
-    uniform sampler2D uDithering;
-    uniform vec2 ditherScale;
-    uniform vec2 texelSize;
+varying vec2 vUv;
+varying vec2 vL;
+varying vec2 vR;
+varying vec2 vT;
+varying vec2 vB;
+uniform sampler2D uTexture;
+uniform sampler2D uBloom;
+uniform sampler2D uSunrays;
+uniform sampler2D uDithering;
+uniform vec2 ditherScale;
+uniform vec2 texelSize;
 
-    vec3 linearToGamma (vec3 color) {
-        color = max(color, vec3(0));
-        return max(1.055 * pow(color, vec3(0.416666667)) - 0.055, vec3(0));
-    }
+vec3 linearToGamma (vec3 color) {
+    color = max(color, vec3(0));
+    return max(1.055 * pow(color, vec3(0.416666667)) - 0.055, vec3(0));
+}
 
-    void main () {
-        vec3 c = texture2D(uTexture, vUv).rgb;
+void main () {
+    vec3 c = texture2D(uTexture, vUv).rgb;
 
     #ifdef SHADING
         vec3 lc = texture2D(uTexture, vL).rgb;
@@ -498,8 +488,19 @@ const displayShaderSource = `
         c += bloom;
     #endif
 
-        float a = max(c.r, max(c.g, c.b));
-        gl_FragColor = vec4(c, a);
+    // Define three dark shades of golden color
+    vec3 gold1 = vec3(0.8, 0.6, 0.2); // Dark Gold
+    vec3 gold2 = vec3(0.7, 0.5, 0.1); // Darker Gold
+    vec3 gold3 = vec3(0.6, 0.4, 0.05); // Darkest Gold
+
+    // Add the gold shades
+    c += gold1;
+    c += gold2;
+    c += gold3;
+    c /= 3.0; // Normalize the added colors
+
+    float a = max(c.r, max(c.g, c.b));
+    gl_FragColor = vec4(c, a);
     }
 `;
 
