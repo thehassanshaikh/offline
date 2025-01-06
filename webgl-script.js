@@ -74,7 +74,7 @@ let config = {
 	COLORFUL: true,
 	COLOR_UPDATE_SPEED: 10,
 	PAUSED: false,
-	BACK_COLOR: { r: 0, g: 0, b: 0 },
+	BACK_COLOR: { r: 185, g: 156, b: 96 },
 	TRANSPARENT: false,
 	BLOOM: false,
 	BLOOM_ITERATIONS: 8,
@@ -90,6 +90,16 @@ let config = {
 	RENDER_SPEED: 0.4
 };
 
+const colorPalette = [
+  [195, 161, 101], // Red
+  [131, 108, 71], // Green
+  [180, 149, 95], // Blue
+];
+
+function getRandomColor() {
+  return colorPalette[Math.floor(Math.random() * colorPalette.length)];
+}
+
 function PointerPrototype() {
 	this.id = -1;
 	this.texcoordX = 0;
@@ -100,7 +110,9 @@ function PointerPrototype() {
 	this.deltaY = 0;
 	this.down = false;
 	this.moved = false;
-	this.color = [30, 0, 300];
+	// this.color = [30, 0, 300];
+   // Assign a random color from the palette
+   this.color = getRandomColor();
 }
 
 let pointers = [];
@@ -142,7 +154,7 @@ function getWebGLContext(canvas) {
 		supportLinearFiltering = gl.getExtension('OES_texture_half_float_linear');
 	}
 
-	gl.clearColor(0.0, 0.0, 0.0, 1.0);
+	gl.clearColor(185 / 255, 156 / 255, 96 / 255, 1.0);
 
 	const halfFloatTexType = isWebGL2 ? gl.HALF_FLOAT : halfFloat.HALF_FLOAT_OES;
 	let formatRGBA;
