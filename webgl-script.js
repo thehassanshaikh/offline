@@ -56,12 +56,8 @@ SOFTWARE.
 // Simulation section
 
 const canvas = document.getElementById("fluid-canvas");
-
-console.log(canvas ? "Canvas selected successfully" : "Canvas not found"); // Debug log
-
 resizeCanvas();
 const { gl, ext } = getWebGLContext(canvas);
-console.log(gl ? "WebGL context initialized" : "Failed to initialize WebGL"); // Debug log
 
 let config = {
   SIM_RESOLUTION: 128,
@@ -75,10 +71,10 @@ let config = {
   SPLAT_RADIUS: 0.25,
   SPLAT_FORCE: 6000,
   SHADING: true,
-  COLORFUL: true,
+  COLORFUL: false,
   COLOR_UPDATE_SPEED: 10,
   PAUSED: false,
-  BACK_COLOR: { r: 0, g: 0, b: 0 },
+  BACK_COLOR: { r: 177, g: 146, b: 93 },
   TRANSPARENT: false,
   BLOOM: true,
   BLOOM_ITERATIONS: 8,

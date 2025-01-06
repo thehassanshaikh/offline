@@ -181,7 +181,7 @@ nav ul li a:hover {
 /* Add filler section */
 
 .add-filler-section {
-  position: relative; /* Ensure the section is the positioning context */
+  position: relative;
   background-image: url("assets/images/add-filler-background.png");
   background-size: cover;
   background-position: center center;
@@ -189,12 +189,13 @@ nav ul li a:hover {
 }
 
 #fluid-canvas {
-  position: absolute; /* Position it relative to the section */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0; /* Place canvas behind content */
+  z-index: 0;
+  background: transparent; /* Ensure transparency */
 }
 
 .add-text-container {
