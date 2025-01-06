@@ -87,6 +87,16 @@ let config = {
   SUNRAYS_WEIGHT: 1.0,
 };
 
+const colorPalette = [
+  { r: 133, g: 109, b: 71 }, // Red
+  { r: 0.0, g: 1.0, b: 0.0 }, // Green
+  { r: 0.0, g: 0.0, b: 1.0 }, // Blue
+];
+
+function getRandomColor() {
+  return colorPalette[Math.floor(Math.random() * colorPalette.length)];
+}
+
 function pointerPrototype() {
   this.id = -1;
   this.texcoordX = 0;
@@ -97,8 +107,11 @@ function pointerPrototype() {
   this.deltaY = 0;
   this.down = false;
   this.moved = false;
-  this.color = [30, 0, 300];
+  // Fetch a color from the palette
+  const randomColor = getRandomColor();
+  this.color = [randomColor.r, randomColor.g, randomColor.b];
 }
+
 
 let pointers = [];
 let splatStack = [];
@@ -1737,6 +1750,8 @@ function multipleSplats(amount) {
 
 function splat(x, y, dx, dy, color) {
   splatProgram.bind();
+
+  // Velocity Splat
   gl.uniform1i(splatProgram.uniforms.uTarget, velocity.read.attach(0));
   gl.uniform1f(splatProgram.uniforms.aspectRatio, canvas.width / canvas.height);
   gl.uniform2f(splatProgram.uniforms.point, x, y);
@@ -1748,10 +1763,24 @@ function splat(x, y, dx, dy, color) {
   blit(velocity.write);
   velocity.swap();
 
+  // Dye Splat
   gl.uniform1i(splatProgram.uniforms.uTarget, dye.read.attach(0));
+  // Use color parameter
   gl.uniform3f(splatProgram.uniforms.color, color.r, color.g, color.b);
   blit(dye.write);
   dye.swap();
+}
+
+function autoPlayFluidEffect() {
+  setInterval(() => {
+    const randomX = Math.random();
+    const randomY = Math.random();
+    const randomDX = (Math.random() - 0.5) * 2;
+    const randomDY = (Math.random() - 0.5) * 2;
+    const randomColor = getRandomColor();
+
+    splat(randomX, randomY, randomDX, randomDY, randomColor);
+  }, 500);
 }
 
 function correctRadius(radius) {
