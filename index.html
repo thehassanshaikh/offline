@@ -411,20 +411,21 @@
               <img src="assets/images/contact.png" alt="" class="img-fluid">
             </div>
             <div class="col-md-6 d-flex align-items-center justify-content-center  ">
-              <form class="w-100">
+              <form class="w-100" action="send_mail.php" method="POST">
                 <div class="row mb-3">
                   <div class="col-sm-10">
-                    <input type="text" class="contact-form" id="name" placeholder="Enter your name">
+                    <input type="text" class="contact-form" id="name" placeholder="Enter your name" required>
                   </div>
                 </div>
                 <div class="row mb-3">
                   <div class="col-sm-10">
-                    <input type="email" class="contact-form" id="email" placeholder="Enter your email">
+                    <input type="email" class="contact-form" id="email" placeholder="Enter your email" required>
                   </div>
                 </div>
                 <div class="row mb-3">
                   <div class="col-sm-10">
-                    <textarea class="contact-form" id="message" rows="10" placeholder="Enter your message"></textarea>
+                    <textarea class="contact-form" id="message" rows="10" placeholder="Enter your message"
+                      required></textarea>
                   </div>
                 </div>
                 <div class="row">
