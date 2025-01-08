@@ -367,6 +367,7 @@ li.service-list-text {
 p.real-estate-text {
   transform: none;
   writing-mode: horizontal-tb;
+  padding-right: 20rem;
 }
 
 .col-md-2.real-estate-2-img-2 {
@@ -435,26 +436,6 @@ button.btn.submit-button {
   border-radius: 1rem;
 }
 
-/* .hospitality-text {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  font-family: "league-spartan";
-  font-weight: 600;
-  font-size: 8rem;
-  color: transparent;
-  text-shadow: 0 0 0px #9191918a;
-  padding: 0 2rem;
-}
-
-.hospitality-flex {
-  display: flex;
-  align-items: center;
-}
-
-.hospitality-text {
-  margin-right: 1rem; /* Adjust the spacing as needed 
-} 
-*/
 .col-md-6.tablet-img-con {
   display: flex
 ;
@@ -530,6 +511,10 @@ button.btn.submit-button {
   position: relative;
   left: 10rem;
   top: 15rem;
+}
+
+p.real-estate-text {
+  padding-right: 20rem;
 }
 
  }
