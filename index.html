@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Offline</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- luxbar -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/balzss/luxbar/ae5835e2/build/luxbar.min.css">
   <!-- Bootstrap -->
   <link rel="preload" href="assets/fonts/LeagueSpartan-VariableFont_wght.ttf" as="font" type="font/ttf"
     crossorigin="anonymous">
@@ -22,6 +24,22 @@
     <img id="loading-image" src="assets/images/Logo.png" alt="Loading...">
   </div>
   <div class="main-container">
+    <header id="luxbar" class="luxbar-fixed">
+      <input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox"/>
+      <div class="luxbar-menu luxbar-menu-right luxbar-menu-light">
+          <ul class="luxbar-navigation">
+              <li class="luxbar-header">
+                  <a href="#" class="luxbar-brand"><img src="assets/images/Logo.png" alt="Logo"></a>
+                  <label class="luxbar-hamburger luxbar-hamburger-doublespin" 
+                  id="luxbar-hamburger" for="luxbar-checkbox"> <span></span> </label>
+              </li>
+              <li class="luxbar-item"><a href="#home">Home</a></li>
+              <li class="luxbar-item"><a href="#about">About</a></li>
+              <li class="luxbar-item"><a href="#work">Work</a></li>
+              <li class="luxbar-item"><a href="#contact">Contact</a></li>
+          </ul>
+      </div>
+  </header>
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
@@ -437,16 +455,16 @@
           <p>all rights reserved | Offline Studio and Designing Solutions Private Limited © 2025</p>
         </div>
         <div class="col-md-2">
-          <p>support@offlineangency.co</p>
+          <p class="link-text"><a href="mailto:support@offlineangency.co">support@offlineangency.co</a></p>
         </div>
         <div class="col-md-2">
-          <p>+91 96986 86862</p>
+          <p class="link-text"><a href="tel:+91 96986 86862">+91 96986 86862</a></p>
         </div>
         <div class="col-md-2 d-flex">
-          <img src="assets/icons/instagram.png" alt="Social Icon 1" class="img-fluid social-icons">
-          <img src="assets/icons/linkedin.png" alt="Social Icon 2" class="img-fluid social-icons">
-          <img src="assets/icons/youtube.png" alt="Social Icon 3" class="img-fluid social-icons">
-          <img src="assets/icons/whats-app.png" alt="Social Icon 4" class="img-fluid social-icons">
+          <a href="https://instagram.com/" target="_blank"><img src="assets/icons/instagram.png" alt="Social Icon 1" class="img-fluid social-icons"></a>
+          <a href="https://linkedin.com/" target="_blank"><img src="assets/icons/linkedin.png" alt="Social Icon 2" class="img-fluid social-icons"></a>
+          <a href="https://youtube.com/" target="_blank"></a><img src="assets/icons/youtube.png" alt="Social Icon 3" class="img-fluid social-icons"></a>
+          <a href="https://whatsapp.com/" target="_blank"> <img src="assets/icons/whats-app.png" alt="Social Icon 4" class="img-fluid social-icons"></a>
         </div>
       </div>
     </div>
