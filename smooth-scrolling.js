@@ -8,9 +8,9 @@ const lenis = new Lenis({
 window.lenis = lenis;
 
 //get scroll value
-lenis.on("scroll", ({ scroll, limit }) => {
-  console.log({ scroll, limit });
-});
+// lenis.on("scroll", ({ scroll, limit }) => {
+//   console.log({ scroll, limit });
+// });
 
 function raf() {
   lenis.raf();

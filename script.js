@@ -1,3 +1,4 @@
+  
  // Simulate page load
  window.addEventListener('load', () => {
     const loadingScreen = document.getElementById('loading-screen');
