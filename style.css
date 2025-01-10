@@ -451,8 +451,7 @@ button.btn.submit-button {
 }
 
 .col-md-6.tablet-img-con {
-  display: flex
-;
+  display: flex;
   justify-content: flex-end;
   align-items: center;
 }
@@ -489,6 +488,8 @@ button.btn.submit-button {
 .link-text a{
   text-decoration: none;
   color: inherit;
+  font-family:'open-sans';
+  font-weight: 500;
 }
 
 
