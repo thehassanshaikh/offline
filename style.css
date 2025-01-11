@@ -79,10 +79,6 @@ a.luxbar-brand img {
   width: 50%;
 }
 
-nav ul li a.scrolled-over-image {
-  color: #fff !important;
-}
-
 nav {
   min-height: 100vh;
   padding: 0 1rem;
@@ -91,6 +87,7 @@ nav {
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 2;
 }
 
 nav ul {
@@ -115,9 +112,10 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #000;
-  z-index: -1;
+  color: #000; /* Default color */
+  transition: color 0.3s ease; /* Smooth color transition */
 }
+
 nav ul li a:hover {
   text-decoration: underline;
 }
