@@ -65,12 +65,6 @@ body {
   width: 100%;
 }
 
-/* .hero-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-} */
 
 #luxbar{
   display: none;
@@ -83,6 +77,10 @@ body {
 
 a.luxbar-brand img {
   width: 50%;
+}
+
+nav ul li a.scrolled-over-image {
+  color: #fff !important;
 }
 
 nav {

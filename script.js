@@ -27,3 +27,7 @@ menuItems.forEach((item) => {
     checkbox.checked = false;
   });
 });
+
+
+// Navbar colour change on overlapping the image
+
