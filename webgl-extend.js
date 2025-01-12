@@ -8,18 +8,22 @@
  const simulation = new WebGLFluidEnhanced(container);
  simulation.start();
 
+ 
+  // Trigger a random splat every 3 seconds
+setInterval(() => {
+  simulation.multipleSplats(10); // 1 random splat
+}, 3000);
+
+
+
  // Stop the simulation when the page is about to unload
  window.addEventListener('beforeunload', () => {
    simulation.stop();
  });
 
  simulation.setConfig({
-  colorPalette: ['#cc211b', '#f1c593', '#e87e54', '#f193a7', '#ec6fa9'],
-  backgroundColor: '#020202',
-  densityDissipation: 3,
-  colorUpdateSpeed: 5,
-  hover: false,
-  brightness: 0.6,
-  velocityDissipation: 0.5,
-  bloom: false,
+  colorPalette: ['#120F02', '#91760D', '#BC9E22', '#D3BC60', '#E1D18F','#F0E7C4','#241E03'],
+  backgroundColor: '#B59410',
+  transparent: false,
+
 });

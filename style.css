@@ -198,6 +198,8 @@ nav ul li a:hover {
 .fluid-effect-section{
   width: 100%;
   height: 100vh;
+  background-image: url("assets/images/add-filler-background.png");
+  overflow: hidden;
 }
 #fluid-container {
   position: relative;
