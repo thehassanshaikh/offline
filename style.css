@@ -3,6 +3,11 @@
   src: url("assets/fonts/LeagueSpartan-VariableFont_wght.ttf");
   font-weight: 600;
 }
+@font-face {
+  font-family: "league-spartan";
+  src: url("assets/fonts/LeagueSpartan-VariableFont_wght.ttf");
+  font-weight: 800;
+}
 
 @font-face {
   font-family: "maradona-signature";
@@ -129,8 +134,9 @@ nav ul li a:hover {
   font-family: "league-spartan", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
-  font-weight: 600;
+  font-weight: 800;
   margin-top: -4rem;
+  margin-right: 3rem;
 }
 
 .hero-text-white,
@@ -630,6 +636,10 @@ button.btn.submit-button {
   .services-text {
     font-size: 3rem;
   }
+  .section-style{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
   span.g {
     font-size: 20rem;
   }
@@ -659,4 +669,8 @@ button.btn.submit-button {
     justify-content: center;
     padding-top: 1rem;
   }
+
+  p.real-estate-text {
+    padding-right: 5rem;
+}
 }
