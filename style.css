@@ -177,9 +177,16 @@ nav ul li a:hover {
   top: 10rem;
   right: 10.5rem;
 }
+
 .about-heading {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  font-family: "maradona-signature";
+  padding-bottom: 1rem;
+}
+
+.about-heading-2 {
   font-size: 2rem;
-  font-weight: bold;
   margin-bottom: 10px;
   font-family: "maradona-signature";
   padding-bottom: 1rem;
