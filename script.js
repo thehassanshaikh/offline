@@ -1,59 +1,48 @@
- // Simulate page load
- window.addEventListener('load', () => {
-    const loadingScreen = document.getElementById('loading-screen');
-    const content = document.getElementById('content');
-
-    // Fade out the loading screen
+// Loading screen logic
+document.addEventListener('DOMContentLoaded', () => {
+  const loadingScreen = document.getElementById('loading-screen');
+  
+  // Fade out the loading screen after a short delay
+  setTimeout(() => {
     loadingScreen.style.transition = 'opacity 0.5s ease';
     loadingScreen.style.opacity = '0';
-
-    // Remove loading screen after fade out
+    
+    // Remove loading screen from DOM after fade out
     setTimeout(() => {
       loadingScreen.style.display = 'none';
-      content.style.display = 'block';
-    }, 2000);
-  });
+    }, 500);
+  }, 1000);
+});
 
-  // close the menu when a menu item is clicked
-// Select the checkbox controlling the menu
+// close the menu when a menu item is clicked
 const checkbox = document.getElementById("luxbar-checkbox");
-
-// Select all menu items
 const menuItems = document.querySelectorAll(".luxbar-item a");
 
 menuItems.forEach((item) => {
   item.addEventListener("click", () => {
-    // Uncheck the checkbox to close the menu
     checkbox.checked = false;
   });
 });
 
-
 // Navbar colour change on overlapping the image
-// Select all sections to observe
 const sections = document.querySelectorAll('.invert-nav-color');
-
-// Select all navbar links
 const navbarLinks = document.querySelectorAll('nav ul li a');
 
-// Function to toggle navbar text color
 function toggleNavbarTextColor(isOverImage) {
   navbarLinks.forEach(link => {
     if (isOverImage) {
-      link.style.color = '#fff'; // Change text to white
+      link.style.color = '#fff';
     } else {
-      link.style.color = '#000'; // Default text color (black)
+      link.style.color = '#000';
     }
   });
 }
 
-// IntersectionObserver setup
 const observer = new IntersectionObserver(
   entries => {
     let isOverImage = false;
     let maxVisibility = 0;
 
-    // Determine the most visible section
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const visibility = entry.intersectionRect.height;
@@ -67,12 +56,11 @@ const observer = new IntersectionObserver(
     toggleNavbarTextColor(isOverImage);
   },
   {
-    root: null, // Observe within the viewport
-    threshold: [0.1, 0.5, 1.0], // Trigger at different visibility levels
+    root: null,
+    threshold: [0.1, 0.5, 1.0],
   }
 );
 
-// Observe each section
 sections.forEach(section => {
   observer.observe(section);
 });
