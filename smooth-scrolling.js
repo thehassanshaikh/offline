@@ -147,6 +147,26 @@ document.addEventListener('DOMContentLoaded', () => {
       ease: 'none'
     });
   });
+
+    // Apply smooth fade-in effect for all images and text in viewport
+    // const elements = document.querySelectorAll('img, .services-text, p, h1, h2, h3, h4, h5, h6'); // Add selectors as needed
+
+    // elements.forEach(element => {
+    //   gsap.fromTo(
+    //     element,
+    //     { opacity: 0 }, // Start with zero opacity
+    //     {
+    //       opacity: 1,    // Fade to full opacity
+    //       scrollTrigger: {
+    //         trigger: element,
+    //         start: 'top 90%', // Trigger when the top of the element is 90% into the viewport
+    //         end: 'bottom 10%', // End when the bottom is 10% into the viewport
+    //         scrub: 0.5,
+    //         invalidateOnRefresh: true,
+    //       }
+    //     }
+    //   );
+    // });
 });
 
 // Handle resize with debouncing
@@ -157,3 +177,4 @@ window.addEventListener('resize', () => {
     ScrollTrigger.refresh();
   }, 250);
 });
+
