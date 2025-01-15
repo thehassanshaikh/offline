@@ -545,6 +545,9 @@ box-shadow: 10px 10px 50px -8px rgba(163,163,163,1);
   padding: 0!Important;
 }
 
+footer {
+  padding-bottom: 2rem;
+}
 @media screen and (max-width: 1024px) {
   .about-text-con {
     position: relative;

@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
   gsap.defaults({
     ease: "power2.out",
     duration: 1,
-    overwrite: true, // Changed to true to prevent animation conflicts
+    overwrite: true,
   });
 
   // Hero section parallax
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
         trigger: ".hero-con",
         start: "top top",
         end: "bottom top",
-        scrub: 1, // Increased smoothness
+        scrub: 1,
         invalidateOnRefresh: true,
       },
       y: 200,
@@ -166,9 +166,35 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
 
-  // Apply fade-in effect for all images
+  // Special handling for footer elements
+  const footerElements = document.querySelectorAll(
+    "footer p, footer a, footer img"
+  );
+  footerElements.forEach((element) => {
+    gsap.fromTo(
+      element,
+      {
+        opacity: 0,
+        y: 30,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 90%", // Start animation when element is 90% from top of viewport
+          end: "top 70%", // End animation when element is 70% from top of viewport
+          scrub: false, // Disable scrub for footer elements
+          toggleActions: "play none none none", // Play animation once when triggered
+        },
+        duration: 0.8,
+      }
+    );
+  });
+
+  // Apply fade-in effect for all other elements
   const elements = document.querySelectorAll(
-    "img:not(.hero-img-1-con img), .services-text, p, h1, h2, h3, h4, h5, h6"
+    "img:not(.hero-img-1-con img):not(footer img), .services-text, p:not(footer p), h1, h2, h3, h4, h5, h6"
   );
 
   elements.forEach((element) => {
@@ -215,3 +241,28 @@ const handleResize = debounce(() => {
 }, 250);
 
 window.addEventListener("resize", handleResize);
+
+const footerElements = document.querySelectorAll(
+  "footer p, footer a, footer img"
+);
+footerElements.forEach((element) => {
+  gsap.fromTo(
+    element,
+    {
+      opacity: 0,
+      y: 30,
+    },
+    {
+      opacity: 1,
+      y: 0,
+      scrollTrigger: {
+        trigger: element,
+        start: "top bottom-=50", // Trigger earlier when the element is near the bottom of the viewport
+        end: "top center", // End the animation earlier
+        scrub: false,
+        toggleActions: "play none none none",
+      },
+      duration: 0.8,
+    }
+  );
+});
