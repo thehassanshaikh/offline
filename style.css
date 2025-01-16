@@ -283,6 +283,13 @@ nav ul li a:hover {
 .signature-style {
   font-family: "maradona-signature";
 }
+
+/* ripple sectoin */
+#ripples{
+  background-image: url(assets/images/water.jpg);
+  background-size: cover;
+}
+
 /* services section */
 
 .services-text-image-container {
@@ -598,7 +605,7 @@ footer {
     color: black;
   }
   .side-padding {
-    padding: 0 2rem;
+    padding: 0 2rem!important;
   }
   .hero-img-1-con img {
     margin: 0;
@@ -614,7 +621,7 @@ footer {
   }
 
   .side-padding {
-    padding: 0 2rem;
+    padding: 0 2rem!important;
   }
   .about-text-con,
   .about-logo-con {
@@ -662,7 +669,7 @@ footer {
     display: block;
   }
   .side-padding {
-    padding: 0 1rem;
+    padding: 0 1rem!important;
   }
 
   .services-text ,  .alco-bev .services-text{
