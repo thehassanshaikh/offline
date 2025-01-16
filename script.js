@@ -1,15 +1,15 @@
 // Loading screen logic
-document.addEventListener('DOMContentLoaded', () => {
-  const loadingScreen = document.getElementById('loading-screen');
-  
+document.addEventListener("DOMContentLoaded", () => {
+  const loadingScreen = document.getElementById("loading-screen");
+
   // Fade out the loading screen after a short delay
   setTimeout(() => {
-    loadingScreen.style.transition = 'opacity 0.5s ease';
-    loadingScreen.style.opacity = '0';
-    
+    loadingScreen.style.transition = "opacity 0.5s ease";
+    loadingScreen.style.opacity = "0";
+
     // Remove loading screen from DOM after fade out
     setTimeout(() => {
-      loadingScreen.style.display = 'none';
+      loadingScreen.style.display = "none";
     }, 500);
   }, 1000);
 });
@@ -25,30 +25,30 @@ menuItems.forEach((item) => {
 });
 
 // Navbar colour change on overlapping the image
-const sections = document.querySelectorAll('.invert-nav-color');
-const navbarLinks = document.querySelectorAll('nav ul li a');
+const sections = document.querySelectorAll(".invert-nav-color");
+const navbarLinks = document.querySelectorAll("nav ul li a");
 
 function toggleNavbarTextColor(isOverImage) {
-  navbarLinks.forEach(link => {
+  navbarLinks.forEach((link) => {
     if (isOverImage) {
-      link.style.color = '#fff';
+      link.style.color = "#fff";
     } else {
-      link.style.color = '#000';
+      link.style.color = "#000";
     }
   });
 }
 
 const observer = new IntersectionObserver(
-  entries => {
+  (entries) => {
     let isOverImage = false;
     let maxVisibility = 0;
 
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const visibility = entry.intersectionRect.height;
         if (visibility > maxVisibility) {
           maxVisibility = visibility;
-          isOverImage = entry.target.classList.contains('invert-nav-color');
+          isOverImage = entry.target.classList.contains("invert-nav-color");
         }
       }
     });
@@ -61,6 +61,10 @@ const observer = new IntersectionObserver(
   }
 );
 
-sections.forEach(section => {
+sections.forEach((section) => {
   observer.observe(section);
+});
+
+$("#ripples").ripples({
+  resolution: 400,
 });
