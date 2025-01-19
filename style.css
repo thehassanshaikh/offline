@@ -172,7 +172,7 @@ nav ul li a:hover {
 .about-text-con {
   position: relative;
   top: 10rem;
-  right: 10.5rem;
+  right: 11rem;
 }
 
 .about-text-con a {
@@ -195,7 +195,7 @@ nav ul li a:hover {
 }
 
 .about-text {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-family: "open-sans";
   font-weight: 700;
 }
@@ -508,11 +508,8 @@ button.btn.submit-button {
   display: flex;
 }
 
-.hospitality-img-3 {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  z-index: 1;
+.hospitality-img-3 img {
+  margin-right: -5rem;
 }
 
 .col-md-6.hospitality-img-4 {
