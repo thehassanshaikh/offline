@@ -175,6 +175,11 @@ nav ul li a:hover {
   right: 10.5rem;
 }
 
+.about-text-con a {
+  text-decoration: none;
+  color: black;
+}
+
 .about-heading {
   font-size: 4rem;
   margin-bottom: 10px;
