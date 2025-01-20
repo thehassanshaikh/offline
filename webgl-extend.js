@@ -10,7 +10,7 @@ simulation.start();
 
 // Trigger a random splat every 3 seconds
 setInterval(() => {
-  simulation.multipleSplats(15); // 1 random splat
+  simulation.multipleSplats(8); // 1 random splat
 }, 1500);
 
 // Stop the simulation when the page is about to unload

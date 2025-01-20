@@ -1,3 +1,15 @@
+
+const LOADING_DURATION = 1500; // Match this with the setTimeout in smooth-scrolling.js
+
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    const loadingScreen = document.getElementById("loading-screen");
+    loadingScreen.style.transition = "opacity 0.5s ease";
+    loadingScreen.style.opacity = "0";
+    setTimeout(() => loadingScreen.style.display = "none", 500);
+  }, LOADING_DURATION);
+});
+
 // Loading screen logic
 document.addEventListener("DOMContentLoaded", () => {
   const loadingScreen = document.getElementById("loading-screen");

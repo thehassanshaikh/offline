@@ -248,6 +248,26 @@ nav ul li a:hover {
   font-weight: bold;
 }
 
+.hero-img-1-con img,
+.services-section img,
+[class*='-section'] img {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Add parallax optimization classes */
+.parallax-element {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Optimize background parallax sections */
+.invert-nav-color {
+  background-attachment: fixed;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
 @media (max-width: 768px) {
   .add-heading {
     font-size: 1.5rem; /* Smaller font for mobile */
