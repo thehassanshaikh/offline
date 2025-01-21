@@ -170,7 +170,36 @@ function initAnimations() {
     );
   });
 
-  // Services Text parallax effects
+  // Lifestyle section parallax with stagger
+
+  gsap.utils.toArray(".lifestyle-7 img").forEach((img, index) => {
+    const speed = index % 2 === 0 ? 1 : 1.2; // Alternate parallax speeds
+
+    gsap.fromTo(
+      img,
+      {
+        y: 100 * (index % 2 === 0 ? 1 : -1), // Starting Y offset
+        opacity: 0,
+        scale: 1,
+      },
+      {
+        scrollTrigger: {
+          trigger: img,
+          start: "top 85%",
+          end: "center center",
+          scrub: true,
+          invalidateOnRefresh: true,
+        },
+        y: 0, // Ending position (no offset)
+        opacity: 1, // Fade in
+        scale: 1,
+        duration: 1.5 * speed, // Adjust speed based on index
+        ease: "power1.out",
+      }
+    );
+  });
+
+  //  Text parallax effects
   gsap.utils.toArray(".parallax-text").forEach((text) => {
     gsap.fromTo(
       text,
