@@ -270,6 +270,7 @@ nav ul li a:hover {
   will-change: transform;
 }
 
+
 @media (max-width: 768px) {
   .add-heading {
     font-size: 1.5rem; /* Smaller font for mobile */
