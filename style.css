@@ -496,7 +496,7 @@ img.img-fluid.social-icons {
 }
 
 .contact-form {
-  border: 2px black solid;
+  border: 5px black solid;
   border-radius: 20px;
   background-color: transparent;
   display: block;
@@ -518,6 +518,21 @@ button.btn.submit-button {
   color: white;
   padding: 1rem 3rem;
   border-radius: 1rem;
+  /* font-family: 'oepn-sans'; */
+  font-weight: 700;
+}
+
+::placeholder {
+  color: black;
+  font-family: 'open-sans';
+  font-weight: 700;
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Edge 12-18 */
+  color: black;
+  font-family: 'open-sans';
+  font-weight: 700;
 }
 
 .col-md-6.tablet-img-con {
