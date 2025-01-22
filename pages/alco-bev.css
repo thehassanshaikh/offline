@@ -1,0 +1,40 @@
+
+@font-face {
+    font-family: "maradona-signature";
+    src: url("/assets/fonts/Maradona Signature.ttf");
+  }
+
+  @font-face {
+    font-family: "open-sans";
+    src: url("/assets/fonts/OpenSans-VariableFont_wdth,wght.ttf");
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: auto !important;
+  }
+  
+  body {
+    background-image: url("/assets/images/grey-paper-background.webp");
+    background-size: cover;
+  }
+
+
+  .signature-style {
+    font-family: "maradona-signature";
+  }
+
+  .hero-section{
+    padding-top:2rem;
+  }
+
+  p.heading-sub-text {
+    padding-top: 3rem;
+    font-family: 'open-sans', sans-serif;
+    font-size: 1.25rem;
+}
