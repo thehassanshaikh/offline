@@ -1,40 +1,70 @@
+@font-face {
+  font-family: "maradona-signature";
+  src: url("/assets/fonts/Maradona Signature.ttf");
+}
 
 @font-face {
-    font-family: "maradona-signature";
-    src: url("/assets/fonts/Maradona Signature.ttf");
-  }
+  font-family: "open-sans";
+  src: url("/assets/fonts/OpenSans-VariableFont_wdth,wght.ttf");
+}
 
-  @font-face {
-    font-family: "open-sans";
-    src: url("/assets/fonts/OpenSans-VariableFont_wdth,wght.ttf");
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html {
-    scroll-behavior: auto !important;
-  }
-  
-  body {
-    background-image: url("/assets/images/grey-paper-background.webp");
-    background-size: cover;
-  }
+* {
+  outline: 1px solid red;
+}
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+html, body {
+  width: 100%;
+  scroll-behavior: auto !important;
+}
 
-  .signature-style {
-    font-family: "maradona-signature";
-  }
+body {
+  background-image: url("/assets/images/grey-paper-background.webp");
+  background-size: cover;
+}
 
-  .hero-section{
-    padding-top:2rem;
-  }
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
 
-  p.heading-sub-text {
-    padding-top: 3rem;
-    font-family: 'open-sans', sans-serif;
-    font-size: 1.25rem;
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.vh-100 {
+  overflow-x: hidden;
+}
+
+section.container-fluid {
+  overflow-x: hidden;
+}
+
+.signature-style {
+  font-family: "maradona-signature";
+}
+
+.hero-section {
+  padding-top: 2rem;
+}
+
+.heading-sub-text {
+  white-space: normal; /* Prevent overflow due to no wrapping */
+  overflow-wrap: break-word; /* Break long words */
+}
+
+p.heading-sub-text {
+  padding-top: 3rem;
+  font-family: 'open-sans', sans-serif;
+  font-size: 1.25rem;
 }
