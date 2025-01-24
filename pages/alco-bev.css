@@ -27,6 +27,11 @@ html, body {
 body {
   background-image: url("/assets/images/grey-paper-background.webp");
   background-size: cover;
+  overflow: hidden; /* Hide scrollbars */
+}
+
+section {
+overflow: hidden;
 }
 
 .container-fluid {
@@ -85,4 +90,13 @@ p a {
 
 .copyright-text{
   font-size: 0.75rem;
+}
+
+.parallaxThree img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.parallaxThree img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Add a shadow */
 }

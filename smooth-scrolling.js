@@ -107,6 +107,10 @@ function initAnimations() {
     );
   });
 
+  // -------------------------------------------- for inner Alce bev paeg -------------------------------------------------------
+
+  // -------------------------------------------- ENd -------------------------------------------------------
+
   // Initialize section-specific parallax effects
   const sections = [
     { selector: ".hospitality-section", speed: 0.8 },
@@ -114,7 +118,48 @@ function initAnimations() {
     { selector: ".real-estate", speed: 1.2 },
     { selector: ".media", speed: 0.9 },
     { selector: ".ngo", speed: 1.1 },
+    { selector: ".parallaxOne", speed: 0.8 },
+    { selector: ".parallaxTwo", speed: 1 },
+    // { selector: ".parallaxThree", speed: 1.1 },
   ];
+
+  document.querySelectorAll(".parallaxThree img").forEach((img, index) => {
+    img.style.willChange = "transform, opacity, scale";
+
+    // Correct animation directions based on the image's position
+    const animationConfig = {
+      0: { x: -200, y: 0 }, // Left image comes from the left
+      1: { x: 0, y: 200 }, // Middle image comes from the bottom
+      2: { x: 200, y: 0 }, // Right image comes from the right
+    };
+
+    const { x, y } = animationConfig[index % 3];
+
+    gsap.fromTo(
+      img,
+      {
+        x: x, // Start with directional offset
+        y: y, // Start with vertical offset
+        opacity: 0, // Initially invisible
+        scale: 1.2, // Slightly zoomed in
+      },
+      {
+        x: 0, // Return to original position horizontally
+        y: 0, // Return to original position vertically
+        opacity: 1, // Fully visible
+        scale: 1, // Reset to original size
+        scrollTrigger: {
+          trigger: img.closest(".parallaxThree"),
+          start: "top bottom", // Start animation when section enters viewport
+          end: "bottom top", // End animation when section leaves viewport
+          scrub: true, // Smooth scroll-driven animation
+          invalidateOnRefresh: true, // Recalculate on resize
+        },
+        duration: 1.5, // Duration of the animation
+        ease: "power2.out", // Smooth easing effect
+      }
+    );
+  });
 
   sections.forEach(({ selector, speed }) => {
     const images = gsap.utils.toArray(`${selector} img`);
