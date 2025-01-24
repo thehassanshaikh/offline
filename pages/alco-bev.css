@@ -14,10 +14,6 @@
   box-sizing: border-box;
 }
 
-* {
-  outline: 1px solid red;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -67,4 +63,26 @@ p.heading-sub-text {
   padding-top: 3rem;
   font-family: 'open-sans', sans-serif;
   font-size: 1.25rem;
+}
+
+
+img.img-fluid.social-icons {
+  width: 1.5rem;
+  height: min-content;
+  margin: 0 10px;
+}
+
+p{
+  font-family: 'open-sans';
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+p a {
+  color: #000;
+  text-decoration: none;
+}
+
+.copyright-text{
+  font-size: 0.75rem;
 }

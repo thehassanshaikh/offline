@@ -489,11 +489,7 @@ iframe {
   border-right: 5px solid #000;
 }
 
-img.img-fluid.social-icons {
-  width: 50px;
-  height: 30px;
-  padding: 0 10px;
-}
+
 
 .contact-form {
   border: 5px black solid;
@@ -592,8 +588,25 @@ box-shadow: 10px 10px 50px -8px rgba(163,163,163,1);
   padding: 0!Important;
 }
 
-footer {
-  padding-bottom: 2rem;
+footer p{
+  font-family: 'open-sans';
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+img.img-fluid.social-icons {
+  width: 1.5rem;
+  height: min-content;
+  margin: 0 10px;
+}
+
+p a {
+  color: #000;
+  text-decoration: none;
+}
+
+.copyright-text{
+  font-size: 0.75rem;
 }
 @media screen and (max-width: 1024px) {
   .about-text-con {
@@ -698,6 +711,10 @@ footer {
   .alco-bew-img-2{
     padding-right: 0;
   }
+
+  .hospitality-img-3 img {
+    margin-right: 0;
+}
 }
 
 /* Media queries for mobile devices */
@@ -735,6 +752,10 @@ footer {
     justify-content: center;
     align-items: start;
   }
+
+  .hospitality-img-3 img {
+    margin-right: 0;
+}
 
   .services-text,  .alco-bev .services-text {
     writing-mode: horizontal-tb;
