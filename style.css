@@ -437,6 +437,10 @@ li.service-list-text {
   width: 35%;
 }
 
+.hospitality-img-3{
+  margin-right: -5rem;
+}
+
 .responsive-image {
   width: 100%;
   height: auto;
@@ -610,6 +614,7 @@ p a {
 .copyright-text{
   font-size: 0.75rem;
 }
+
 @media screen and (max-width: 1024px) {
   .about-text-con {
     position: relative;
@@ -657,6 +662,11 @@ p a {
   .pe-md-6{
     padding-right: 2rem;
   }
+
+  .hospitality-img-3{
+    margin-right: -2rem;
+  }
+  
 }
 
 @media screen and (max-width: 768px) {
@@ -718,6 +728,11 @@ p a {
     padding-right: 0;
   }
 
+
+  .hospitality-img-3{
+    margin-right: 0;
+  }
+
 }
 
 /* Media queries for mobile devices */
@@ -754,6 +769,11 @@ p a {
     display: flex;
     justify-content: center;
     align-items: start;
+  }
+
+
+  .hospitality-img-3{
+    margin-right: 0;
   }
 
   .services-text,  .alco-bev .services-text {
