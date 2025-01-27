@@ -462,7 +462,6 @@ li.service-list-text {
 p.real-estate-text {
   transform: none;
   writing-mode: horizontal-tb;
-  padding-right: 8rem;
 }
 
 .col-md-2.real-estate-2-img-2 {
@@ -655,10 +654,6 @@ p a {
     top: 15rem;
   }
 
-  p.real-estate-text {
-    padding-right: 8rem;
-  }
-
   .pe-md-6{
     padding-right: 2rem;
   }
@@ -792,7 +787,5 @@ p a {
     padding-top: 1rem;
   }
 
-  p.real-estate-text {
-    padding-right: 2rem;
-}
+
 }
