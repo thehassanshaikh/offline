@@ -4,6 +4,16 @@ import { ScrollTrigger } from "https://cdn.jsdelivr.net/npm/gsap@3.12.5/ScrollTr
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Define the debounce function
+function debounce(func, wait) {
+  let timeout;
+  return function (...args) {
+    const context = this;
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(context, args), wait);
+  };
+}
+
 let lenis;
 
 // Initialize Lenis with optimized settings
@@ -31,7 +41,19 @@ function initLenis() {
   }
 
   requestAnimationFrame(raf);
+
+    // Debounced resize handler
+    const debouncedResize = debounce(() => {
+      lenis.resize();
+      ScrollTrigger.refresh(true); // Refresh after resizing
+    }, 250);
+  
+    window.addEventListener("resize", debouncedResize);
+  
+    return lenis; // Return Lenis instance if needed elsewhere
 }
+
+
 
 // Initialize parallax and scroll animations
 function initAnimations() {
@@ -113,13 +135,19 @@ function initAnimations() {
 
   // Initialize section-specific parallax effects
   const sections = [
-    { selector: ".hospitality-section", speed: 0.8 },
-    { selector: ".lifestyle-section", speed: 1 },
-    { selector: ".real-estate", speed: 1.2 },
-    { selector: ".media", speed: 0.9 },
-    { selector: ".ngo", speed: 1.1 },
+    // { selector: ".hospitality-section", speed: 0.8 },
+    // { selector: ".hospitality-section-2", speed: 0.9 },
+    // { selector: ".hospitality-section-3", speed: 1 },
+    // { selector: ".hospitality-section-4", speed: 1.1 },
+    // { selector: ".hospitality-section-5", speed: 1.2 },
+    // { selector: ".hospitality-section-6", speed: 1 },
+    // { selector: ".hospitality-section-7", speed: 0.9 },
+    // // { selector: ".lifestyle-section", speed: 1 },
+    // { selector: ".real-estate", speed: 1.2 },
+    // { selector: ".media", speed: 0.9 },
+    // { selector: ".ngo", speed: 1.1 },
     { selector: ".parallaxOne", speed: 0.8 },
-    { selector: ".parallaxTwo", speed: 1 },
+    { selector: ".parallaxTwo", speed: 0.5 },
     // { selector: ".parallaxThree", speed: 1.1 },
   ];
 
@@ -202,14 +230,14 @@ function initAnimations() {
       {
         scrollTrigger: {
           trigger: text,
-          start: "top 85%",
+          start: "top 80%",
           end: "center center",
           scrub: 1,
           invalidateOnRefresh: true,
         },
         x: 0,
         opacity: 1,
-        duration: 1.5,
+        duration: 2,
         ease: "power1.out",
       }
     );
@@ -217,32 +245,32 @@ function initAnimations() {
 
   // Lifestyle section parallax with stagger
 
-  gsap.utils.toArray(".lifestyle-7 img").forEach((img, index) => {
-    const speed = index % 2 === 0 ? 1 : 1.2; // Alternate parallax speeds
+  // gsap.utils.toArray(".lifestyle-7 img").forEach((img, index) => {
+  //   const speed = index % 2 === 0 ? 1 : 1.2; // Alternate parallax speeds
 
-    gsap.fromTo(
-      img,
-      {
-        y: 100 * (index % 2 === 0 ? 1 : -1), // Starting Y offset
-        opacity: 0,
-        scale: 1,
-      },
-      {
-        scrollTrigger: {
-          trigger: img,
-          start: "top 85%",
-          end: "center center",
-          scrub: true,
-          invalidateOnRefresh: true,
-        },
-        y: 0, // Ending position (no offset)
-        opacity: 1, // Fade in
-        scale: 1,
-        duration: 1.5 * speed, // Adjust speed based on index
-        ease: "power1.out",
-      }
-    );
-  });
+  //   gsap.fromTo(
+  //     img,
+  //     {
+  //       y: 100 * (index % 2 === 0 ? 1 : -1), // Starting Y offset
+  //       opacity: 0,
+  //       scale: 1,
+  //     },
+  //     {
+  //       scrollTrigger: {
+  //         trigger: img,
+  //         start: "top 85%",
+  //         end: "center center",
+  //         scrub: true,
+  //         invalidateOnRefresh: true,
+  //       },
+  //       y: 0, // Ending position (no offset)
+  //       opacity: 1, // Fade in
+  //       scale: 1,
+  //       duration: 1.5 * speed, // Adjust speed based on index
+  //       ease: "power1.out",
+  //     }
+  //   );
+  // });
 
   //  Text parallax effects
   gsap.utils.toArray(".parallax-text").forEach((text) => {
@@ -279,6 +307,8 @@ function initAnimations() {
       ease: "none",
     });
   });
+
+  
 }
 
 // Initialize smooth anchor scrolling
@@ -310,10 +340,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Optimized resize handler
-const debouncedResize = debounce(() => {
-  if (lenis) lenis.resize();
-  ScrollTrigger.refresh(true);
-}, 250);
+// const debouncedResize = debounce(() => {
+//   if (lenis) lenis.resize();
+//   ScrollTrigger.refresh(true);
+// }, 250);
 
 window.addEventListener("resize", debouncedResize);
 
