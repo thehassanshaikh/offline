@@ -1,11 +1,11 @@
 @font-face {
   font-family: "maradona-signature";
-  src: url("/assets/fonts/Maradona Signature.ttf");
+  src: url("../assets/fonts/Maradona Signature.ttf");
 }
 
 @font-face {
   font-family: "open-sans";
-  src: url("/assets/fonts/OpenSans-VariableFont_wdth,wght.ttf");
+  src: url("../assets/fonts/OpenSans-VariableFont_wdth,wght.ttf");
 }
 
 * {
@@ -25,7 +25,7 @@ html, body {
 }
 
 body {
-  background-image: url("/assets/images/grey-paper-background.webp");
+  background-image: url("../assets/images/grey-paper-background.webp");
   background-size: cover;
   overflow: hidden; /* Hide scrollbars */
 }
