@@ -30,9 +30,9 @@ html {
 }
 
 body {
-  background-image: url("assets/images/grey-paper-background.webp");
+  background-image: url("./assets/images/grey-paper-background.webp");
   background-repeat: repeat;
-  background-size: contain;
+  background-size: contain!important;
 }
 
 /* loading css */
