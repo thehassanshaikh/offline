@@ -107,9 +107,6 @@ function initAnimations() {
     );
   });
 
-  // -------------------------------------------- for inner Alce bev paeg -------------------------------------------------------
-
-  // -------------------------------------------- ENd -------------------------------------------------------
 
   // Initialize section-specific parallax effects
   const sections = [
@@ -119,7 +116,7 @@ function initAnimations() {
     { selector: ".media", speed: 0.9 },
     { selector: ".ngo", speed: 1.1 },
     { selector: ".parallaxOne", speed: 0.8 },
-    { selector: ".parallaxTwo", speed: 1 },
+    { selector: ".parallaxTwo", speed: 0.9 },
     // { selector: ".parallaxThree", speed: 1.1 },
   ];
 

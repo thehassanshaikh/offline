@@ -100,3 +100,15 @@ p a {
   transform: scale(1.05); /* Slight zoom on hover */
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Add a shadow */
 }
+
+
+/* extend bootstrap */
+
+.w-70{
+  width: 70%;
+}
+
+.py-6 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
