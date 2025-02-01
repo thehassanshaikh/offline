@@ -27,7 +27,12 @@ html, body {
 body {
   background-image: url("../assets/images/grey-paper-background.webp");
   background-size: contain;
-  overflow: hidden; /* Hide scrollbars */
+  
+}
+
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto; /* Allow vertical scrolling */
 }
 
 section {
