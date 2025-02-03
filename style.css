@@ -519,6 +519,8 @@ iframe {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+
+
 button.btn.submit-button {
   background-color: black;
   color: white;
@@ -528,12 +530,16 @@ button.btn.submit-button {
   font-weight: 700;
 }
 
-::placeholder {
+::placeholder, input[type="text"] , input[type="email"]{
   color: black;
   font-family: 'open-sans';
   font-weight: 700;
   opacity: 1; /* Firefox */
 }
+
+/* textarea:focus{
+  color: red;
+} */
 
 ::-ms-input-placeholder { /* Edge 12-18 */
   color: black;
