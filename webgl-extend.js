@@ -9,9 +9,9 @@ const simulation = new WebGLFluidEnhanced(container);
 simulation.start();
 
 // Trigger a random splat every 3 seconds
-setInterval(() => {
-  simulation.multipleSplats(8); // 1 random splat
-}, 1500);
+// setInterval(() => {
+//   simulation.multipleSplats(8); // 1 random splat
+// }, 1500);
 
 // Stop the simulation when the page is about to unload
 window.addEventListener("beforeunload", () => {
@@ -28,7 +28,9 @@ simulation.setConfig({
     "#F0E7C4",
     "#111111",
   ],
-  backgroundColor: "#B59410",
-  transparent: false,
+  // backgroundColor: transparent,
+  transparent: true,
   bloom: false,
+  colorful: false,
+  curl: 1,
 });
