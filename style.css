@@ -355,16 +355,27 @@ ol, ul {
 }
 
 /* ripple sectoin */
-#ripples {
+#ripples,#ripples-2,#ripples-3,#ripples-4{
   width: 100%;
   height: 100vh;
   background-size: cover; /* Try contain or 100% 100% */
   background-position: center;
   background-repeat: no-repeat;
   /* background-image: url(assets/images/water.jpg); */
-  /* background-image: url("https://elements-resized.envatousercontent.com/envato-shoebox/c0d7/7502-4a6d-4622-a053-af805840f098/63d197084735983a1ff732ae_withmeta.jpg?w=1600&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=70357a975a9edeb75c6cb79d08189ad6f3e9bc663fe13fb0b6811929ae5abea0"); */
+}
+#ripples{
+  background-image: url("https://elements-resized.envatousercontent.com/envato-shoebox/c0d7/7502-4a6d-4622-a053-af805840f098/63d197084735983a1ff732ae_withmeta.jpg?w=1600&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=70357a975a9edeb75c6cb79d08189ad6f3e9bc663fe13fb0b6811929ae5abea0");
 }
 
+#ripples-2{
+    background-image: url("https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/54/f7/1d/62/1c/v1_E10/E1055ERF.JPG?w=1600&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=2be0c0ec05a2fcfd822b5731ab8e9e2b0f5a05fbe517fe2b04a6d4a4f48a9a30");
+}
+#ripples-3{
+    background-image: url("https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/3b/69/40/1e/ce/v1_E10/E10C7EN.jpg?w=1600&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=da49568da8c65d6d2d8ef5546e270f66ae767937580326c477e8cf510a2cc66b");
+}
+#ripples-4{
+  background-image: url("https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/46/b5/42/9e/d7/v1_E10/E10ABGTJ.JPG?w=1600&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=bccdb851861ae256ce74547d4564661f0b3d97fdcf79820d7200a686d2ab64d1");
+}
 /* services section */
 
 .services-text-image-container {
