@@ -92,8 +92,8 @@ $("#ripples-3").ripples({
 $(document).ready(function () {
   $("#ripples-4").ripples({
     resolution: 512, // Higher resolution for smoother ripples
-    dropRadius: 20, // Adjust the size of ripples
-    perturbance: 0.02, // Lower value for a smoother effect
+    dropRadius: 30, // Adjust the size of ripples
+    perturbance: 0.03, // Lower value for a smoother effect
     interactive: true, // Keep interactivity enabled
   });
 
@@ -103,8 +103,8 @@ $(document).ready(function () {
     let x = Math.random() * $el.width();
     let y = Math.random() * $el.height();
     let radius = 15 + Math.random() * 15; // Random size
-    let strength = 0.04 + Math.random() * 0.02; // Random intensity
+    let strength = 0.02 + Math.random() * 0.02; // Random intensity
 
     $el.ripples("drop", x, y, radius, strength);
-  }, 2000); // Drops every 2 seconds
+  }, 4000); // Drops every 4 seconds
 });

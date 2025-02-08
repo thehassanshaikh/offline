@@ -376,6 +376,38 @@ ol, ul {
 #ripples-4{
   background-image: url("assets/images/hot-pink-bg.png");
 }
+
+
+/* Typewriter Image Styling */
+.typewriter-container {
+  position: absolute;
+  bottom: 20%;
+  right: 7%;
+  transform: translateX(-50%);
+  animation: floating 3s infinite ease-in-out;
+}
+
+.typewriter-img {
+  width: 80%; /* Adjust size as needed */
+  height: auto;
+  opacity: 0.95; /* Slight transparency */
+  filter: drop-shadow(30px 50px 20px rgba(0, 0, 0, 0.5)); /* shadow effect */
+
+}
+
+/* Floating/Bouncing Effect */
+@keyframes floating {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px); /* Moves up */
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
 /* services section */
 
 .services-text-image-container {
@@ -701,7 +733,7 @@ p a {
 
   /* hospitality section */
 
-  .services-text,  .alco-bev .services-text {
+  .services-text,  .alco-bev .services-text a {
     font-size: 6rem;
   }
 
