@@ -85,9 +85,6 @@ $("#ripples").ripples({
 $("#ripples-2").ripples({
   resolution: 400,
 });
-$("#ripples-3").ripples({
-  resolution: 400,
-});
 
 $(document).ready(function () {
   $("#ripples-4").ripples({
