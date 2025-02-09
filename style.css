@@ -126,14 +126,23 @@ nav ul li a {
   transition: color 0.3s ease; /* Smooth color transition */
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
-}
 
-.hero-img-1-con img {
+/* .hero-img-1-con img {
   margin-left: 10rem;
   z-index: 1;
+} */
+.hero-logo  {
+  margin-left: 10rem;
+  z-index: 1;
+  transition: margin-left 0.6s ease-in-out;
+
 }
+
+.hero-logo.animating {
+  margin-left: -15rem;
+  z-index: 1;
+}
+
 
 .hero-text-p {
   font-size: 2rem;
@@ -141,7 +150,7 @@ nav ul li a:hover {
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
   font-weight: 800;
-  margin-top: -4rem;
+  margin-top: -7rem;
   margin-right: 3rem;
 }
 
@@ -204,6 +213,14 @@ nav ul li a:hover {
   font-weight: 700;
 }
 
+.about-logo-con img {
+  display: none; /* Hide original about section logo */
+}
+
+.final-logo-style{
+  margin-top: -15rem; /* Only applied when animation completes */
+  transition: all 0.5s ease-in-out; /* Smooth transition when adding/removing */
+}
 /* Add filler section */
 
 .add-filler-section {
