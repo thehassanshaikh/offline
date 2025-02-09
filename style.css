@@ -165,6 +165,8 @@ nav ul li a {
   padding-bottom: 5rem;
 }
 
+
+
 .about-section-con {
   display: grid;
   grid-template-columns: 20% 40% 40%; /* Three columns with specified widths */
