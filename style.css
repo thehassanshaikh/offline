@@ -160,7 +160,7 @@ nav ul li a {
 }
 
 .section-style {
-  min-height: 100vh;
+  min-height: 100vh!important;
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -635,9 +635,15 @@ button.btn.submit-button {
   opacity: 1; /* Firefox */
 }
 
-/* textarea:focus{
-  color: red;
-} */
+
+textarea:focus {
+  border-color: black; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add a glow effect */
+  color: black;
+  font-family: 'open-sans';
+  font-weight: 700;
+  opacity: 1; /* Firefox */
+}
 
 ::-ms-input-placeholder { /* Edge 12-18 */
   color: black;
