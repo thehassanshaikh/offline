@@ -32,7 +32,6 @@ simulation.setConfig({
   transparent: true,
   bloom: false,
   colorful: true,
-  curl: 1,
+  curl: 21,
   sunrays: false,
-  splatRadius: 0.1,
 });

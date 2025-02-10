@@ -107,7 +107,6 @@
 //     );
 //   });
 
-
 //   // Initialize section-specific parallax effects
 //   const sections = [
 //     { selector: ".hospitality-section", speed: 0.8 },
@@ -320,40 +319,169 @@
 //   ScrollTrigger.getAll().forEach((st) => st.kill());
 // });
 
-// ================= new animation ===================== 
+// ================= new animation =====================
 
+gsap.registerPlugin(ScrollTrigger);
 
-    gsap.registerPlugin(ScrollTrigger);
+// Initialize Lenis for smooth scrolling
+const lenis = new Lenis({
+  duration: 1.5, // Smooth scrolling duration
+  easing: (t) => 1 - Math.pow(1 - t, 3), // Cubic easing for a natural feel
+  smoothWheel: true,
+  smoothTouch: true,
+  touchMultiplier: 2,
+  infinite: false,
+});
 
-    const heroLogo = document.querySelector(".hero-img-1-con img");
-    const aboutLogoCon = document.querySelector(".about-logo-con");
+// Sync Lenis scroll with GSAP ScrollTrigger
+lenis.on("scroll", ScrollTrigger.update);
 
-    const aboutLogoRect = aboutLogoCon.getBoundingClientRect();
-    const heroLogoRect = heroLogo.getBoundingClientRect();
+function raf(time) {
+  lenis.raf(time);
+  ScrollTrigger.update();
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
 
-    gsap.to(heroLogo, {
-      x: aboutLogoRect.left - heroLogoRect.left, 
-      y: aboutLogoRect.top - heroLogoRect.top,   
-      scale: 0.5,
-      duration: 2,
-      ease: "power3.inOut",
-      scrollTrigger: {
-          trigger: ".about-section",
+const heroLogo = document.querySelector(".hero-img-1-con img");
+const aboutLogoCon = document.querySelector(".about-logo-con");
+
+const aboutLogoRect = aboutLogoCon.getBoundingClientRect();
+const heroLogoRect = heroLogo.getBoundingClientRect();
+
+gsap.to(heroLogo, {
+  x: aboutLogoRect.left - heroLogoRect.left,
+  y: aboutLogoRect.top - heroLogoRect.top,
+  scale: 0.5,
+  duration: 2,
+  ease: "power3.inOut",
+  scrollTrigger: {
+    trigger: ".about-section",
+    start: "top 90%",
+    end: "top 30%",
+    scrub: 2, // Increased scrub value for smoother animation
+    pin: false,
+    toggleClass: {
+      targets: heroLogo,
+      className: "animating",
+    },
+    onEnterBack: () => {
+      // Keeps the class when scrolling up until the trigger point
+      heroLogo.classList.add("animating");
+    },
+    onLeave: () => {
+      // Ensures class stays active when scrolling down past the end point
+      heroLogo.classList.add("animating");
+    },
+  },
+});
+
+document.querySelectorAll(".section-style").forEach((section) => {
+  const images = section.querySelectorAll("img");
+
+  if (images.length === 1) {
+    // Vertical parallax effect
+    gsap.fromTo(
+      images[0],
+      { y: 100, opacity: 0.8 },
+      {
+        y: -100,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: section,
           start: "top 90%",
-          end: "top 30%",
-          scrub: 2, // Increased scrub value for smoother animation
-          pin: false,
-          toggleClass: {
-              targets: heroLogo,
-              className: "animating"
-          },
-          onEnterBack: () => {
-              // Keeps the class when scrolling up until the trigger point
-              heroLogo.classList.add("animating");
-          },
-          onLeave: () => {
-              // Ensures class stays active when scrolling down past the end point
-              heroLogo.classList.add("animating");
-          }
-      },
+          end: "bottom top",
+          scrub: true,
+        },
+      }
+    );
+  } else if (images.length === 2) {
+    // Horizontal parallax effect (left & right)
+    gsap.fromTo(
+      images[0],
+      { x: -100, opacity: 0.8 },
+      {
+        x: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: section,
+          start: "top 90%",
+          end: "bottom top",
+          scrub: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      images[1],
+      { x: 100, opacity: 0.8 },
+      {
+        x: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: section,
+          start: "top 90%",
+          end: "bottom top",
+          scrub: true,
+        },
+      }
+    );
+  } else if (images.length === 3) {
+    // Left, right, and zoom effect
+    gsap.fromTo(
+      images[0],
+      { x: -100, opacity: 0.8 },
+      {
+        x: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: section,
+          start: "top 90%",
+          end: "bottom top",
+          scrub: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      images[1],
+      { scale: 1.2, opacity: 0.8 },
+      {
+        scale: 1,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: section,
+          start: "top 90%",
+          end: "bottom top",
+          scrub: true,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      images[2],
+      { x: 100, opacity: 0.8 },
+      {
+        x: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: section,
+          start: "top 90%",
+          end: "bottom top",
+          scrub: true,
+        },
+      }
+    );
+  }
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", (e) => {
+    e.preventDefault();
+    const target = document.querySelector(anchor.getAttribute("href"));
+    if (target) {
+      lenis.scrollTo(target, { offset: 0, duration: 1.5 });
+    }
   });
+});
