@@ -324,24 +324,24 @@
 gsap.registerPlugin(ScrollTrigger);
 
 // Initialize Lenis for smooth scrolling
-const lenis = new Lenis({
-  duration: 1.5, // Smooth scrolling duration
-  easing: (t) => 1 - Math.pow(1 - t, 3), // Cubic easing for a natural feel
-  smoothWheel: true,
-  smoothTouch: true,
-  touchMultiplier: 2,
-  infinite: false,
-});
+// const lenis = new Lenis({
+//   duration: 1.5, // Smooth scrolling duration
+//   easing: (t) => 1 - Math.pow(1 - t, 3), // Cubic easing for a natural feel
+//   smoothWheel: true,
+//   smoothTouch: true,
+//   touchMultiplier: 2,
+//   infinite: false,
+// });
 
-// Sync Lenis scroll with GSAP ScrollTrigger
-lenis.on("scroll", ScrollTrigger.update);
+// // Sync Lenis scroll with GSAP ScrollTrigger
+// lenis.on("scroll", ScrollTrigger.update);
 
-function raf(time) {
-  lenis.raf(time);
-  ScrollTrigger.update();
-  requestAnimationFrame(raf);
-}
-requestAnimationFrame(raf);
+// function raf(time) {
+//   lenis.raf(time);
+//   ScrollTrigger.update();
+//   requestAnimationFrame(raf);
+// }
+// requestAnimationFrame(raf);
 
 const heroLogo = document.querySelector(".hero-img-1-con img");
 const aboutLogoCon = document.querySelector(".about-logo-con");
@@ -376,112 +376,112 @@ gsap.to(heroLogo, {
   },
 });
 
-document.querySelectorAll(".section-style").forEach((section) => {
-  const images = section.querySelectorAll("img");
+// document.querySelectorAll(".section-style").forEach((section) => {
+//   const images = section.querySelectorAll("img");
 
-  if (images.length === 1) {
-    // Vertical parallax effect
-    gsap.fromTo(
-      images[0],
-      { y: 100, opacity: 0.8 },
-      {
-        y: -100,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: section,
-          start: "top 90%",
-          end: "bottom top",
-          scrub: true,
-        },
-      }
-    );
-  } else if (images.length === 2) {
-    // Horizontal parallax effect (left & right)
-    gsap.fromTo(
-      images[0],
-      { x: -100, opacity: 0.8 },
-      {
-        x: 0,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: section,
-          start: "top 90%",
-          end: "bottom top",
-          scrub: true,
-        },
-      }
-    );
+//   if (images.length === 1) {
+//     // Vertical parallax effect
+//     gsap.fromTo(
+//       images[0],
+//       { y: 100, opacity: 0.8 },
+//       {
+//         y: -100,
+//         opacity: 1,
+//         scrollTrigger: {
+//           trigger: section,
+//           start: "top 90%",
+//           end: "bottom top",
+//           scrub: true,
+//         },
+//       }
+//     );
+//   } else if (images.length === 2) {
+//     // Horizontal parallax effect (left & right)
+//     gsap.fromTo(
+//       images[0],
+//       { x: -100, opacity: 0.8 },
+//       {
+//         x: 0,
+//         opacity: 1,
+//         scrollTrigger: {
+//           trigger: section,
+//           start: "top 90%",
+//           end: "bottom top",
+//           scrub: true,
+//         },
+//       }
+//     );
 
-    gsap.fromTo(
-      images[1],
-      { x: 100, opacity: 0.8 },
-      {
-        x: 0,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: section,
-          start: "top 90%",
-          end: "bottom top",
-          scrub: true,
-        },
-      }
-    );
-  } else if (images.length === 3) {
-    // Left, right, and zoom effect
-    gsap.fromTo(
-      images[0],
-      { x: -100, opacity: 0.8 },
-      {
-        x: 0,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: section,
-          start: "top 90%",
-          end: "bottom top",
-          scrub: true,
-        },
-      }
-    );
+//     gsap.fromTo(
+//       images[1],
+//       { x: 100, opacity: 0.8 },
+//       {
+//         x: 0,
+//         opacity: 1,
+//         scrollTrigger: {
+//           trigger: section,
+//           start: "top 90%",
+//           end: "bottom top",
+//           scrub: true,
+//         },
+//       }
+//     );
+//   } else if (images.length === 3) {
+//     // Left, right, and zoom effect
+//     gsap.fromTo(
+//       images[0],
+//       { x: -100, opacity: 0.8 },
+//       {
+//         x: 0,
+//         opacity: 1,
+//         scrollTrigger: {
+//           trigger: section,
+//           start: "top 90%",
+//           end: "bottom top",
+//           scrub: true,
+//         },
+//       }
+//     );
 
-    gsap.fromTo(
-      images[1],
-      { scale: 1.2, opacity: 0.8 },
-      {
-        scale: 1,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: section,
-          start: "top 90%",
-          end: "bottom top",
-          scrub: true,
-        },
-      }
-    );
+//     gsap.fromTo(
+//       images[1],
+//       { scale: 1.2, opacity: 0.8 },
+//       {
+//         scale: 1,
+//         opacity: 1,
+//         scrollTrigger: {
+//           trigger: section,
+//           start: "top 90%",
+//           end: "bottom top",
+//           scrub: true,
+//         },
+//       }
+//     );
 
-    gsap.fromTo(
-      images[2],
-      { x: 100, opacity: 0.8 },
-      {
-        x: 0,
-        opacity: 1,
-        scrollTrigger: {
-          trigger: section,
-          start: "top 90%",
-          end: "bottom top",
-          scrub: true,
-        },
-      }
-    );
-  }
-});
+//     gsap.fromTo(
+//       images[2],
+//       { x: 100, opacity: 0.8 },
+//       {
+//         x: 0,
+//         opacity: 1,
+//         scrollTrigger: {
+//           trigger: section,
+//           start: "top 90%",
+//           end: "bottom top",
+//           scrub: true,
+//         },
+//       }
+//     );
+//   }
+// });
 
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", (e) => {
-    e.preventDefault();
-    const target = document.querySelector(anchor.getAttribute("href"));
-    if (target) {
-      lenis.scrollTo(target, { offset: 0, duration: 1.5 });
-    }
-  });
-});
+// // Smooth scrolling for anchor links
+// document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+//   anchor.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     const target = document.querySelector(anchor.getAttribute("href"));
+//     if (target) {
+//       lenis.scrollTo(target, { offset: 0, duration: 1.5 });
+//     }
+//   });
+// });
