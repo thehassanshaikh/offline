@@ -105,3 +105,25 @@ $(document).ready(function () {
     $el.ripples("drop", x, y, radius, strength);
   }, 4000); // Drops every 4 seconds
 });
+
+
+// =================
+
+// Contact us Vido Section
+
+// =================
+
+
+ // Detect current hour
+  const hour = new Date().getHours();
+  const videoElement = document.getElementById("backgroundVideo").querySelector("source");
+
+  // Change src depending on day (6am - 6pm) or night (6pm - 6am)
+  if (hour >= 6 && hour < 18) {
+    videoElement.src = "assets/videos/contact.mp4";   //  day video
+  } else {
+    videoElement.src = "assets/videos/contact-night.mp4"; //  night video
+  }
+
+  // Reload video after setting src
+  document.getElementById("backgroundVideo").load();
