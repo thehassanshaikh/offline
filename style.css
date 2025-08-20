@@ -433,6 +433,12 @@ background-image: url("assets/images/yellow-background.png");
   background-image: url(assets/images/services.png);
 }
 
+.services-video{
+  height: 100%;
+  width: 100%;
+  
+}
+
 .services-section-container {
   display: flex;
   justify-content: space-between;
@@ -904,7 +910,6 @@ p a {
     justify-content: center;
     padding-top: 1rem;
   }
-
 
 }
 
