@@ -641,8 +641,8 @@ button.btn.submit-button {
 
 
 textarea:focus {
-  border-color: black; /* Change border color on focus */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add a glow effect */
+  /* border-color: black; /* Change border color on focus */
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); Add a glow effect */
   color: black;
   font-family: 'open-sans';
   font-weight: 700;
@@ -945,7 +945,7 @@ p a {
 
 .video-section form *{
     font-family: 'Poppins',sans-serif;
-    color: #ffffff;
+    color: #080710;
     letter-spacing: 0.5px;
     outline: none;
     border: none;
@@ -968,9 +968,22 @@ p a {
     margin-top: 8px;
     font-size: 14px;
     font-weight: 300;
+    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+.video-section textarea{
+   display: block;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.75);
 }
 .video-section ::placeholder{
-    color: #e5e5e5;
+    color: #080710;
 }
 .video-section button{
     margin-top: 50px;
