@@ -10,21 +10,28 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Loading screen logic
-document.addEventListener("DOMContentLoaded", () => {
-  const loadingScreen = document.getElementById("loading-screen");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const loadingScreen = document.getElementById("loading-screen");
 
-  // Fade out the loading screen after a short delay
-  setTimeout(() => {
-    loadingScreen.style.transition = "opacity 0.5s ease";
-    loadingScreen.style.opacity = "0";
+//   // Fade out the loading screen after a short delay
+//   setTimeout(() => {
+//     loadingScreen.style.transition = "opacity 0.5s ease";
+//     loadingScreen.style.opacity = "0";
 
-    // Remove loading screen from DOM after fade out
-    setTimeout(() => {
-      loadingScreen.style.display = "none";
-    }, 500);
-  }, 1000);
-});
+//     // Remove loading screen from DOM after fade out
+//     setTimeout(() => {
+//       loadingScreen.style.display = "none";
+//     }, 500);
+//   }, 1000);
+// });
+  const introVideo = document.getElementById('intro-video');
+    const content = document.getElementById('content');
 
+    introVideo.onended = () => {
+      introVideo.style.display = "none"; // hide video
+      document.body.style.overflow = "auto"; // enable scrolling
+      content.style.display = "block"; // show website content
+    };
 // close the menu when a menu item is clicked
 const checkbox = document.getElementById("luxbar-checkbox");
 const menuItems = document.querySelectorAll(".luxbar-item a");
@@ -122,7 +129,7 @@ $(document).ready(function () {
   if (hour >= 6 && hour < 18) {
     videoElement.src = "assets/videos/contact.mp4";   //  day video
   } else {
-    videoElement.src = "assets/videos/contact-night.mp4"; //  night video
+    videoElement.src = "assets/videos/contact.mp4"; //  night video
   }
 
   // Reload video after setting src

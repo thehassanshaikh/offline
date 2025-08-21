@@ -17,10 +17,16 @@
 
 <body>
   <!-- Loading Screen -->
-  <div id="loading-screen">
+  <!-- <div id="loading-screen">
     <img id="loading-image" src="assets/images/Loader_GIF.gif" alt="Loading...">
-  </div>
-  <div class="main-container">
+  </div> -->
+ 
+    <video id="intro-video" autoplay muted playsinline>
+      <source src="assets/videos/landing.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  
+  <div class="main-container" id="content">
     <header id="luxbar" class="luxbar-fixed">
       <input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox" />
       <div class="luxbar-menu luxbar-menu-right luxbar-menu-light">
